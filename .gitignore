@@ -1,0 +1,15 @@
+# Real family data (PII: kids' names, ages) -- never commit
+data/family-profile.json
+
+# Local content cache -- rebuildable, and may embed titles specific to your household
+data/content_cache.sqlite
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# OS
+.DS_Store

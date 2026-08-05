@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kid Content Guardian family profile",
+  "description": "Defines the household's kids and the rubric used to score streaming titles for each of them.",
+  "type": "object",
+  "required": ["kids"],
+  "properties": {
+    "kids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "age", "max_maturity_rating", "max_pacing_score"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Used only for local display in diff reports; never sent to any external API."
+          },
+          "age": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 17
+          },
+          "max_maturity_rating": {
+            "type": "string",
+            "description": "Ceiling for the platform's own maturity scale, expressed as a US TV/MPAA-style rating.",
+            "enum": ["TV-Y", "TV-Y7", "TV-G", "G", "TV-PG", "PG", "TV-14", "PG-13"]
+          },
+          "banned_themes": {
+            "type": "array",
+            "description": "Common Sense Media theme/content tags this kid should never be shown, regardless of overall rating (e.g. 'violence', 'scary_imagery', 'romance').",
+            "items": { "type": "string" }
+          },
+          "max_pacing_score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "description": "Ceiling on the 1-10 stimulation/pacing score (1 = calmest, 10 = most frenetic). Titles above this are blocked even if the maturity rating fits."
+          },
+          "allow_titles": {
+            "type": "array",
+            "description": "Explicit per-kid overrides that always pass, even if the rubric would otherwise block them.",
+            "items": { "type": "string" }
+          },
+          "block_titles": {
+            "type": "array",
+            "description": "Explicit per-kid overrides that always block, even if the rubric would otherwise allow them.",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "platform_profiles": {
+      "type": "object",
+      "description": "Maps a kid's name to the profile name used on each streaming platform, so discovered catalogs can be attributed correctly.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": { "type": "string" }
+      }
+    }
+  }
+}

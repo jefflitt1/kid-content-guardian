@@ -1,0 +1,32 @@
+{
+  "kids": [
+    {
+      "name": "Example Kid (age 4)",
+      "age": 4,
+      "max_maturity_rating": "TV-Y",
+      "banned_themes": ["violence", "scary_imagery", "romance"],
+      "max_pacing_score": 4,
+      "allow_titles": ["Bluey"],
+      "block_titles": []
+    },
+    {
+      "name": "Example Kid (age 9)",
+      "age": 9,
+      "max_maturity_rating": "TV-Y7",
+      "banned_themes": ["sexual_content", "violence"],
+      "max_pacing_score": 7,
+      "allow_titles": [],
+      "block_titles": ["Cocomelon"]
+    }
+  ],
+  "platform_profiles": {
+    "netflix": {
+      "Example Kid (age 4)": "Kids",
+      "Example Kid (age 9)": "Big Kids"
+    },
+    "primevideo": {
+      "Example Kid (age 4)": "Little One",
+      "Example Kid (age 9)": "Big Kid"
+    }
+  }
+}
