@@ -3,7 +3,7 @@ name: kid-content-guardian
 description: Use when a parent wants to review what's available to their kids' profiles on streaming services (Netflix, Prime Video, and other adapters as added) against an age/maturity/pacing rubric, and apply the resulting blocks via a supervised browser session. Triggers on requests like "check what's available to my kids on Netflix", "sync my streaming parental controls", "set up kid content guardian", or "review my family's streaming settings".
 allowed-tools: Bash, Read, Write, Edit, mcp__claude-in-chrome__navigate, mcp__claude-in-chrome__computer, mcp__claude-in-chrome__read_page, mcp__claude-in-chrome__get_page_text, mcp__claude-in-chrome__find, mcp__claude-in-chrome__tabs_context_mcp, mcp__claude-in-chrome__tabs_create_mcp, mcp__claude-in-chrome__tabs_close_mcp
 license: MIT
-metadata: {"requires_computer_use": true, "supervised_only": true, "platforms": ["netflix", "primevideo"]}
+metadata: {"requires_computer_use": true, "supervised_only": true, "platforms": ["netflix", "primevideo"], "jgle": {"owner": "Harry Whitfield", "tier": "T2", "business_line": "JGLP", "source": "internal"}}
 ---
 
 # Kid Content Guardian
