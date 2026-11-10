@@ -5,6 +5,8 @@ services against a rubric you set — age, maturity rating, banned themes, and a
 frenetic is this" pacing score — and applies the resulting blocks through a **supervised** browser
 session you watch.
 
+If this skill is useful to you, please give it a [⭐ on GitHub](https://github.com/jefflitt1/kid-content-guardian) — it helps others find it.
+
 ## Who this is for
 
 **This is not a general consumer app.** It's a [Claude Code](https://claude.com/claude-code) skill,
@@ -93,3 +95,5 @@ walks them live and confirms the navigation still matches.
 ## License
 
 MIT — see `LICENSE`.
+
+If it helped, a [⭐](https://github.com/jefflitt1/kid-content-guardian) is a small way to help the next parent find it.
